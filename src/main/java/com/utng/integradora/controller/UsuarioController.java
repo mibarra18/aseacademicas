@@ -79,6 +79,9 @@ public class UsuarioController {
 	}
 	
 	
-	//VISTAS PARA LOS USUARIOS
-	//ALUMNO
+	@RequestMapping(value="/recuperar")
+	public String recuperar() {
+		
+		return "recuperar";
+	}
 }

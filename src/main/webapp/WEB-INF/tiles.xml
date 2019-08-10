@@ -73,7 +73,28 @@
 	</definition>
 	
 	
-	
+	<definition name="recuperar" extends="base-definition">
+		<put-attribute name="recuperar"
+			value="recuperar" />
+				
+			<put-attribute name="menuEstudiante"
+			value="" />
+			<put-attribute name="menuAdmin"
+			value="" />
+			<put-attribute name="menuProfesor"
+			value="" />
+				
+			<put-attribute name="cabeceraEstudiante"
+			value="" />
+			<put-attribute name="cabeceraAdmin"
+			value="" />
+			<put-attribute name="cabeceraProfesor"
+			value="" />
+				
+			<put-attribute name="body"
+			value="/WEB-INF/views/usuario/recuperar.jsp" />
+			
+	</definition>
 	
 	
 	<!-- ALUMNO-->

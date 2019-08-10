@@ -36,7 +36,7 @@
                     <a href="${pageContext.request.contextPath}/usuario/registro" >Registrate</a>
                     <br>
                     <br>
-                	<button>¿Olvidaste tu usuario o contrasena?</button>
+                	<a href="${pageContext.request.contextPath}/usuario/recuperar" >¿Olvidaste tu usuario o contraseña?</a>
                 	
                 </section>
 

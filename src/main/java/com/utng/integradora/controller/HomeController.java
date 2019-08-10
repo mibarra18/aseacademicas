@@ -61,6 +61,7 @@ public class HomeController {
 			model.addAttribute("usuario", new Usuario());
 			model.addAttribute("msg", "El usuario o contraseña no correctos");
 			return "/inicio";
+			
 		} else { //Existe el usuario
 			
 			return "perfil";
