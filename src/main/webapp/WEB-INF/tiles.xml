@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC  "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+
+	<!-- Definición base para páginas -->
+	<definition name="base-definition"
+		template="/WEB-INF/views/tiles/templates/layout.jsp">
+		
+		<put-attribute name="title" value="" />
+		<put-attribute name="cabeceraEstudiante"
+			value="/WEB-INF/views/tiles/templates/cabeceraEstudiante.jsp" />
+		<put-attribute name="cabeceraProfesor"
+			value="/WEB-INF/views/tiles/templates/cabeceraProfesor.jsp" />
+		<put-attribute name="cabeceraAdmin"
+			value="/WEB-INF/views/tiles/templates/cabeceraAdmin.jsp" />
+			
+		<put-attribute name="menuEstudiante"
+			value="/WEB-INF/views/tiles/templates/menuEstudiante.jsp" />
+			<put-attribute name="menuAdmin"
+			value="/WEB-INF/views/tiles/templates/menuAdmin.jsp" />
+			<put-attribute name="menuProfesor"
+			value="/WEB-INF/views/tiles/templates/menuProfesor.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="pie"
+			value="/WEB-INF/views/tiles/templates/pie.jsp" />
+	</definition>
+
+	<definition name="base-definition-error"
+		template="/WEB-INF/views/tiles/templates/layoutError.jsp">
+		
+		<put-attribute name="title" value="Error en el servidor" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="pie"
+			value="/WEB-INF/views/tiles/templates/pie.jsp" />
+	</definition>
+
+	<!-- Error Page -->
+	<definition name="errorPage" extends="base-definition-error">
+		
+		<put-attribute name="body"
+			value="/WEB-INF/views/errorPage.jsp" />
+	</definition>
+
+
+	
+
+
+
+
+	<!-- Index e inicio de sesión -->
+	<definition name="inicio" extends="base-definition">
+		<put-attribute name="inicio"
+			value="inicio" />
+				
+			<put-attribute name="menuEstudiante"
+			value="" />
+			<put-attribute name="menuAdmin"
+			value="" />
+			<put-attribute name="menuProfesor"
+			value="" />
+				
+			<put-attribute name="cabeceraEstudiante"
+			value="" />
+			<put-attribute name="cabeceraAdmin"
+			value="" />
+			<put-attribute name="cabeceraProfesor"
+			value="" />
+				
+			<put-attribute name="body"
+			value="/WEB-INF/views/usuario/inicio.jsp" />
+			
+	</definition>
+	
+	
+	
+	
+	
+	<!-- ALUMNO-->
+	
+		<!-- Agregar estudiante -->
+	<definition name="registro" extends="base-definition">
+		<put-attribute name="title"			value="Registrar grupo" />
+		
+			<put-attribute name="menuAdmin"
+			value="" />
+			<put-attribute name="menuProfesor"
+			value="" />
+			<put-attribute name="menuEstudiante"
+			value="" />
+			
+			<put-attribute name="cabeceraEstudiante"
+			value="" />
+			<put-attribute name="cabeceraAdmin"
+			value="" />
+			<put-attribute name="cabeceraProfesor"
+			value="" />
+			<put-attribute name="body"
+			value="/WEB-INF/views/usuario/registro.jsp" />
+	</definition>
+	
+	<!-- Perfil del alumno-->
+	<definition name="perfil" extends="base-definition">
+		<put-attribute name="title"			value="perfil del alumno" />
+		
+			<put-attribute name="menuAdmin"
+			value="" />
+			<put-attribute name="menuProfesor"
+			value="" />
+			
+			<put-attribute name="cabeceraAdmin"
+			value="" />
+			<put-attribute name="cabeceraProfesor"
+			value="" />
+		
+			
+			<put-attribute name="body"
+			value="/WEB-INF/views/alumno/perfil.jsp" />
+	</definition>
+	
+	<!-- Asesoria del alumno-->
+	<definition name="asesoria" extends="base-definition">
+		<put-attribute name="title"			value="solicitar asesoria" />
+		
+			<put-attribute name="menuAdmin"
+			value="" />
+			<put-attribute name="menuProfesor"
+			value="" />
+			
+			<put-attribute name="cabeceraAdmin"
+			value="" />
+			<put-attribute name="cabeceraProfesor"
+			value="" />
+			
+			<put-attribute name="body"
+			value="/WEB-INF/views/alumno/asesoria.jsp" />
+	</definition>
+	
+	<!-- Cancelar asesoria-->
+	<definition name="cancelar" extends="base-definition">
+		<put-attribute name="title"			value="cancelar asesoria" />
+		
+			<put-attribute name="menuAdmin"
+			value="" />
+			<put-attribute name="menuProfesor"
+			value="" />
+			
+			<put-attribute name="cabeceraAdmin"
+			value="" />
+			<put-attribute name="cabeceraProfesor"
+			value="" />
+			
+			<put-attribute name="body"
+			value="/WEB-INF/views/alumno/cancelar.jsp" />
+	</definition>
+	
+	<!-- Notificación del alumno-->
+	<definition name="notificacion" extends="base-definition">
+		<put-attribute name="title"			value="notificaciones" />
+		
+			<put-attribute name="menuAdmin"
+			value="" />
+			<put-attribute name="menuProfesor"
+			value="" />
+			
+			<put-attribute name="cabeceraAdmin"
+			value="" />
+			<put-attribute name="cabeceraProfesor"
+			value="" />
+			
+			<put-attribute name="body"
+			value="/WEB-INF/views/alumno/notificacion.jsp" />
+	</definition>
+	
+	
+	<!-- PROFESOR-->
+	
+	<!-- Perfil del profesor-->
+	<definition name="perfilp" extends="base-definition">
+		<put-attribute name="title"			value="Perfil profesor" />
+		
+			<put-attribute name="menuEstudiante"
+			value="" />
+			<put-attribute name="menuAdmin"
+			value="" />
+			
+			<put-attribute name="cabeceraAdmin"
+			value="" />
+			<put-attribute name="cabeceraEstudiante"
+			value="" />
+			<put-attribute name="body"
+			value="/WEB-INF/views/profesor/perfilp.jsp" />
+	</definition>
+	
+	<!-- Asesoria obligatoria del profesor-->
+	<definition name="solicitar" extends="base-definition">
+		<put-attribute name="title"			value="Asesoria obligatoria" />
+		
+			<put-attribute name="menuEstudiante"
+			value="" />
+			<put-attribute name="menuAdmin"
+			value="" />
+			
+			<put-attribute name="cabeceraAdmin"
+			value="" />
+			<put-attribute name="cabeceraEstudiante"
+			value="" />
+			<put-attribute name="body"
+			value="/WEB-INF/views/profesor/solicitarA.jsp" />
+	</definition>
+	
+	<!-- Cancelar asesoria profesor-->
+	<definition name="cancelarp" extends="base-definition">
+		<put-attribute name="title"			value="Cancelar asesoria" />
+		
+			<put-attribute name="menuEstudiante"
+			value="" />
+			<put-attribute name="menuAdmin"
+			value="" />
+			
+			<put-attribute name="cabeceraAdmin"
+			value="" />
+			<put-attribute name="cabeceraEstudiante"
+			value="" />
+			<put-attribute name="body"
+			value="/WEB-INF/views/profesor/cancelarp.jsp" />
+	</definition>
+	
+	<!--Lista de asistencia profesor-->
+	<definition name="asistencia" extends="base-definition">
+		<put-attribute name="title"			value="Lista de asistencia" />
+		
+			<put-attribute name="menuEstudiante"
+			value="" />
+			<put-attribute name="menuAdmin"
+			value="" />
+			
+			<put-attribute name="cabeceraAdmin"
+			value="" />
+			<put-attribute name="cabeceraEstudiante"
+			value="" />
+			<put-attribute name="body"
+			value="/WEB-INF/views/profesor/asistencia.jsp" />
+	</definition>
+	
+	<!-- ADMINISTRADOR -->
+	<!--Perfil del administrador-->
+	<definition name="perfila" extends="base-definition">
+		<put-attribute name="title"			value="Perfil administrador" />
+		
+			<put-attribute name="menuEstudiante"
+			value="" />
+			<put-attribute name="menuProfesor"
+			value="" />
+			
+			<put-attribute name="cabeceraProfesor"
+			value="" />
+			<put-attribute name="cabeceraEstudiante"
+			value="" />
+			<put-attribute name="body"
+			value="/WEB-INF/views/administrador/perfila.jsp" />
+			
+	</definition>
+	
+	<!--Reporte de asesorias-->
+	<definition name="reporteA" extends="base-definition">
+		<put-attribute name="title"			value="Reportes " />
+	
+			<put-attribute name="menuEstudiante"
+			value="" />
+			<put-attribute name="menuProfesor"
+			value="" />
+			
+			<put-attribute name="cabeceraProfesor"
+			value="" />
+			<put-attribute name="cabeceraEstudiante"
+			value="" />
+				<put-attribute name="body"
+			value="/WEB-INF/views/administrador/reporteA.jsp" />
+	</definition>
+	
+	<!--Reporte de horario-->
+	<definition name="reporteH" extends="base-definition">
+		<put-attribute name="title"			value="Reportes " />
+		
+			<put-attribute name="menuEstudiante"
+			value="" />
+			<put-attribute name="menuProfesor"
+			value="" />
+			
+			<put-attribute name="cabeceraProfesor"
+			value="" />
+			<put-attribute name="cabeceraEstudiante"
+			value="" />
+			<put-attribute name="body"
+			value="/WEB-INF/views/administrador/reporteH.jsp" />
+	</definition>
+	
+	<!--Actualizar profesores-->
+	<definition name="actualizarP" extends="base-definition">
+		<put-attribute name="title"			value="Actualizar " />
+			<put-attribute name="menuEstudiante"
+			value="" />
+			<put-attribute name="menuProfesor"
+			value="" />
+			
+			<put-attribute name="cabeceraProfesor"
+			value="" />
+			<put-attribute name="cabeceraEstudiante"
+			value="" />
+			<put-attribute name="body"
+			value="/WEB-INF/views/administrador/reporteH.jsp" />
+	</definition>
+	
+	<!--Actualizar materias-->
+	<definition name="actualizarm" extends="base-definition">
+		<put-attribute name="title"			value="Actualizar " />
+		
+			<put-attribute name="menuEstudiante"
+			value="" />
+			<put-attribute name="menuProfesor"
+			value="" />
+			
+			<put-attribute name="cabeceraProfesor"
+			value="" />
+			<put-attribute name="cabeceraEstudiante"
+			value="" />
+			
+			<put-attribute name="body"
+			value="/WEB-INF/views/administrador/actualizarm.jsp" />
+	</definition>
+	
+	<!--Actualizar materias-->
+	<definition name="actualizarmp" extends="base-definition">
+		<put-attribute name="title"			value="Actualizar " />
+		
+			<put-attribute name="menuEstudiante"
+			value="" />
+			<put-attribute name="menuProfesor"
+			value="" />
+			
+			<put-attribute name="cabeceraProfesor"
+			value="" />
+			<put-attribute name="cabeceraEstudiante"
+			value="" />
+			
+			<put-attribute name="body"
+			value="/WEB-INF/views/administrador/actualizarmp.jsp" />
+	</definition>
+
+</tiles-definitions>
